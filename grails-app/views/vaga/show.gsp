@@ -50,6 +50,14 @@
 						</g:each>
 					</li>
 				</g:if>
+
+				<g:if test="${vagaInstance?.historicoDeReservas}">
+					<li class="fieldcontain">
+						<span id="tempo-label" class="property-label"><g:message code="vaga.tempo.label" default="Tempo de ocupação" /></span>
+
+						<span class="property-value" aria-labelledby="tempo-label">${vagaInstance.tempoOcupacaoDHMS().days} dias, ${vagaInstance.tempoOcupacaoDHMS().hours} horas, ${vagaInstance.tempoOcupacaoDHMS().minutes} minutos, ${vagaInstance.tempoOcupacaoDHMS().seconds} segundos</span>
+					</li>
+				</g:if>
 			
 			</ol>
 			<g:form>
