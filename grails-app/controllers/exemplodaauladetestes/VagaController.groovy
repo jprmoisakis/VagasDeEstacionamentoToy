@@ -6,11 +6,11 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class VagaController {
 
-    static allowedMethods = [update: "PUT"]//, delete: "DELETE"]
-    // save: "POST" foi retirado porque dá problema com o cucumber, que
-    // provavelmente simula a chamada dessa ação como um GET
+        static allowedMethods = [update: "PUT"]//, delete: "DELETE"]
+        // save: "POST" foi retirado porque dá problema com o cucumber, que
+        // provavelmente simula a chamada dessa ação como um GET
 
-    def index() {
+        def index() {
         redirect(action: "list", params: params)
     }
 
